@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scrabble</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./index.js"></script>
+</head>
+
+<body>
+   
+    <div class="instructions">
+        <h1>INSTRUCTIONS</h1>
+        <ul class="instructionsList">
+            <li>Place tiles on the board to spell out words.  Click on the letter on your rack and then click again on the location you'd like to place it.</li>
+            <li>Except for the first turn, at least one of your letters must touch a letter already in play, and your new letters must all be in the same row or column, and be touching another tile.</li>
+            <li>The letter values of each tile can be accessed by clicking the tab on the right side of the screen.</li>
+            <li>At the beginning of your turn, click "SHOW TILES" to reveal the letters on your rack.</li>
+            <li>After you click "Submit Word" your score is tallied and your rack refreshed from the tile bag.</li>
+            <li>Clicking "Back to Rack" will return the tiles from your current turn back to your rack.</li>
+            <li>Clicking "Refresh Tiles" will give you a brand new rack and shuffle your current tiles back into the bag.  Doing this forfeits your current turn.</li>
+            <li>When one player clears their rack and the bag is empty, the game ends.  The other player's score will decrease by the total value of the letters still in his/her rack.</li>
+            <li>Enter both player's names and click "START" to begin!</li>
+        </ul>
+        <div class="playerNames">
+            <input type="text" placeholder="Player 1 Name" class="playerOneName">
+            <input type="text" placeholder="Player 2 Name" class="playerTwoName">
+        </div>
+        <button class="start">START</button>
+    </div>
+
+    <div class="letterValuesBox">
+        <div class="tab">
+            <hr>
+            <hr>
+            <hr>
+        </div>
+        <div class="letterValues">
+            <ul class="letterValueList"></ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="title">Stack-O </div>
+        <div class="gameBoard">
+        </div>
+        <div class="playerOneScoreBox textBox">
+            <h3 class="playerOneDisplayName">Player 1 Score</h3>
+            <div class="playerOneScore"></div>
+        </div>
+        <div class="playerTwoScoreBox textBox">
+            <h3 class="playerTwoDisplayName">Player 2 Score</h3>
+            <div class="playerTwoScore"></div>
+        </div>
+        <div class="remainingTilesBox textBox">
+            <h3>Remaining Tiles</h3>
+            <div class="remainingTiles"></div>
+        </div>
+        <h2 class="playerOneTitle">Player 1 Tiles</h2>
+        <h2 class="playerTwoTitle">Player 2 Tiles</h2>
+        <div class="playerOneTiles">
+            <div class="playerOneTilesRow">
+            </div>
+        </div>
+        <div class="playerTwoTiles">
+            <div class="playerTwoTilesRow">
+            </div>
+        </div>
+        <button class="showTiles">SHOW TILES</button>
+        <button class="refreshTiles">Refresh Tiles</button>
+        <button class="backToRack">Back to Rack</button>
+        <button class="submitWord">Submit Word</button>
+    </div>
+
+    <button class="playAgain">PLAY AGAIN</button>
+</body>
+
+</html>
